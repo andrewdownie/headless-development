@@ -11,3 +11,12 @@ Your chromebook will now be serving a locally hosted front end that your phone c
 http://quirktools.com/screenfly/ 
 
 Plug the url from localhost.run into this tool, and you will then be able to test front end layouts / functionality for desktop sites, even though a phone screen is much smaller than a desktop screen
+
+## Debug console on mobile devices
+It looks like the only way to get javascript console debugging on mobile devices is to embed it into your app. create a react component that imports 'js-mobile-console', and 'mobile-console.mis.css'. You can npm i js-mobile-console, but the css will have to be downloaded separately.
+
+
+https://github.com/B1naryStudio/js-mobile-console/blob/master/README.md
+
+## Redux debugging on mobile
+Use redux logger
