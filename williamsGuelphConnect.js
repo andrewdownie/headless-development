@@ -9,17 +9,13 @@ const puppeteer = require('puppeteer');
 
 	console.log('creating chrome page');
 	const page = await browser.newPage();
-	//await page.setRequestInterception(true);
+
 
 	console.log('waiting for sign in page redirection');
-	//await page.goto('https://customer.hotspotsystem.com/customer/hotspotlogin.php', {timeout: 0, waitUntil: "networkidle0"});
-	//await page.goto('https://customer.hotspotsystem.com/customer/prelogin.php?operator=guestwifizone&location=2&lang=en&uampi=10.251.192.0&uamport=8081', {timeout: 0, waituntil: "networkidle0"});
-	//await page.goto('http://logout.lan', {timeout: 0, waitUntil: "networkidle0"});
-
 	try{
-		await page.goto('https://customer.hotspotsystem.com/customer/prelogin.php?operator=GuestWiFiZone&location=2&lang=en&uamip=10.251.192.1&uamport=8081', {timeout: 0, waituntil: "networkidle0"});
+		//await page.goto('https://customer.hotspotsystem.com/customer/prelogin.php?operator=GuestWiFiZone&location=2&lang=en&uamip=10.251.192.1&uamport=8081', {timeout: 0, waituntil: "networkidle0"});
+		await page.goto('https:customer.hotspotsystem.com/customer/hotspotlogin.php&res=notyet&uamip=10.251.192.1&uamport=8081&ssid=Williams-Guest&nasid=GuestWiFiZone_2', {timeout: 0, waituntil: "networkidle0"});
 
-		//await page.goto('https://connectivitycheck.gstatic.com/generate_204', {timeout: 0, waitUntil: "networkidle0"});
 	}
 	catch(e){
 		console.log('error caught: ', e);
